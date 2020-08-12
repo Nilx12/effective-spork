@@ -8,9 +8,9 @@ public class Main {
     static void populateSchool(School school) throws BiedaException {
         Teacher teacher = new Teacher();
         teacher.setFirstName("Anna");
-        teacher.setLastName("Firych-Nowacka");
+        teacher.setLastName("firych-Nowacka");
         try {
-            teacher.setWage(1600);
+            teacher.setWage(2300);
         } catch (BiedaException e) {
             System.err.println("Czemu zarabia tak mało? :(");
             throw e;
