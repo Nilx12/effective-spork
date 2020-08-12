@@ -8,7 +8,7 @@ public class Main {
     static void populateSchool(School school) throws BiedaException {
         Teacher teacher = new Teacher();
         teacher.setFirstName("Anna");
-        teacher.setLastName("firych-Nowacka");
+        teacher.setLastName("Firych-Nowacka");
         try {
             teacher.setWage(2300);
         } catch (BiedaException e) {
