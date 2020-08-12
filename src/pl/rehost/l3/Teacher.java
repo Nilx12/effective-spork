@@ -11,7 +11,7 @@ public class Teacher extends Person implements InformationProvider {
 
     public void setWage(int wage) throws BiedaException {
         if (wage < 1500) {
-            throw new BiedaException();
+            throw new BiedaException("Kiepska wypłata");
         }
         this.wage = wage;
     }
