@@ -1,8 +1,9 @@
 package pl.rehost.l3;
 
-public class Person {
+public abstract class Person implements InformationProvider {
     private String firstName;
     private String lastName;
+
 
     public String getFirstName() {
         return firstName;
@@ -18,6 +19,6 @@ public class Person {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
 
+    }
 }

@@ -7,6 +7,15 @@ public class Pupil extends Person implements InformationProvider {
         return index;
     }
 
+    Pupil(){
+
+    }
+    Pupil(String firstName,String lastName,int index)throws BiedaException{
+        this.setFirstName(firstName);
+        this.setLastName(lastName);
+        this.setIndex(index);
+    }
+
     public void setIndex(int index) {
         if (index <= 0) {
             throw new IndexOutOfBoundsException();
@@ -14,7 +23,6 @@ public class Pupil extends Person implements InformationProvider {
         this.index = index;
     }
 
-    @Override
     public String getInfo() {
         return this.getIndex() + " | " + this.getFirstName() + " " + this.getLastName();
     }
