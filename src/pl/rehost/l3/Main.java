@@ -15,7 +15,7 @@ public class Main {
                     new Teacher("Tomasz","Jaworski",1800)
             ));
             school.setTeachers(teachers);
-        } catch (Exception e) {
+        } catch (BiedaException e) {
             System.err.println("Czemu zarabia tak mało? :(");
             throw e;
         }
