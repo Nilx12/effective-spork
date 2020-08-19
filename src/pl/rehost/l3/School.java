@@ -6,7 +6,7 @@ import java.util.List;
 
 public class School {
 
-    private List<Teacher>  teachers ;
+    private List<Teacher> teachers ;
     private List<Pupil> pupils;
 
     public void setPupils(List<Pupil> pupils) {
@@ -26,9 +26,6 @@ public class School {
         this.teachers = teachers;
     }
 
-    public void annaFabjanska(){
-        pupils.clear();
-    }
     public void addTEacher(Teacher teacher){
         if( this.teachers == null){
             teachers = new ArrayList<Teacher>();
@@ -41,5 +38,14 @@ public class School {
             pupils = new ArrayList<Pupil>();
         }
         pupils.add(pupil);
+    }
+
+    public void clearPupils(){
+        pupils.clear();
+    }
+
+
+    public void clearTeachers(){
+        pupils.clear();
     }
 }

@@ -1,6 +1,6 @@
 package pl.rehost.l3;
 
-public class Teacher extends Person implements InformationProvider {
+public class Teacher extends Person {
     private int wage;
 
 
@@ -8,6 +8,12 @@ public class Teacher extends Person implements InformationProvider {
         return wage;
     }
 
+
+    Teacher(String firstName,String lastName,int index)throws BiedaException{
+        this.setFirstName(firstName);
+        this.setLastName(lastName);
+        this.setWage(index);
+    }
 
     public void setWage(int wage) throws BiedaException {
         if (wage < 1500) {

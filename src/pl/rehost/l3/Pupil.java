@@ -1,6 +1,6 @@
 package pl.rehost.l3;
 
-public class Pupil extends Person implements InformationProvider {
+public class Pupil extends Person{
     private int index;
 
     public int getIndex() {

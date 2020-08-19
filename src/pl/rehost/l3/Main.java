@@ -7,12 +7,14 @@ import java.util.List;
 
 public class Main {
 
-    static void populateSchool(School school) throws Exception {
-        Teacher teacher = new Teacher();
-        teacher.setFirstName("Anna");
-        teacher.setLastName("Firych-Nowacka");
+    static void populateSchool(School school) throws BiedaException {
+
         try {
-            teacher.setWage(1600);
+            List<Teacher> teachers = new ArrayList<Teacher>(Arrays.asList(new Teacher("Agnieszka","Kubiś-Lipowska",2300),
+                    new Teacher("Piotr","Duch",1800),
+                    new Teacher("Tomasz","Jaworski",1800)
+            ));
+            school.setTeachers(teachers);
         } catch (Exception e) {
             System.err.println("Czemu zarabia tak mało? :(");
             throw e;
@@ -28,7 +30,7 @@ public class Main {
         school.setPupils(pupils);
     }
 
-    static void printInfo(Person person) {
+    static void printInfo(InformationProvider person) {
         System.out.println(person.getInfo());
     }
 
@@ -46,6 +48,6 @@ public class Main {
 
         // Pętla jak w C, na następnym spotkaniu zrobimy z tego coś bardziej javowego
         school.getPupils().forEach(pupil -> printInfo(pupil));
-
+        school.getTeachers().forEach(teacher -> printInfo(teacher));
     }
 }
